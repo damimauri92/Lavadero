@@ -1,5 +1,5 @@
 <?php
-// Conectar a la base de datos (reemplaza 'localhost', 'usuario', 'contraseña' y 'nombre_bd' con tus propios valores)
+// Conectar a la base de datos 
 $conexion = new mysqli('localhost', 'usuario', 'contraseña', 'nombre_bd');
 
 // Verificar la conexión
