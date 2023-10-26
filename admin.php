@@ -21,25 +21,16 @@
         <tr>
             <th>Nombre</th>
             <th>Patente</th>
-            <th>Vehículo</th>
             <th>Fecha de Turno</th>
-            <?php
-            if ($esAdmin) {
-                echo "<th>Eliminar Usuario</th>";
-            }
-            ?>
+            <th>Eliminar Turno</th>
+            <th>Eliminar Usuario</th>
         </tr>
         <!-- Aca muestra los datos de la base de datos usando PHP -->
         <?php
-
-        // Agregar un botón de eliminación solo si es administrador
-        if ($esAdmin) {
-            echo "<tr>";
-            echo "<td colspan='4'></td>"; // Celda vacía para alinear con las columnas anteriores
-            echo "<td><button>Eliminar Usuario</button></td>";
-            echo "</tr>";
-        }
+        include("pruebamostrar.php");
         ?>
+
+
     </table>
 </div>
 

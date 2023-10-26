@@ -6,7 +6,7 @@
         $result1 = $conexion->query($sql1);
         // Mostrar resultados de la Consulta 2
         while ($row1 = $result1->fetch_assoc()) {
-            echo "<td>" . $row1['nombre'] . "</td>";
+            echo "<tr><td>" . $row1['nombre'] . "</td>";
         }
 
         //consulta2
@@ -27,10 +27,10 @@
         echo "<td>" . $fecha = $row3['fecha'] . "</td>";
         ?>
         <td><button onclick="eliminarFecha('<?php echo $fecha; ?>')">Eliminar</button></td>
-            <?php 
+        <td><button onclick="eliminarUsuario()">Eliminar Usuario</button></td></tr>
+        <?php
+        
         }
-    
-
 
 ?>
 <script>
@@ -38,14 +38,14 @@
         var confirmacion = confirm("¿Estás seguro de que deseas eliminar la fecha: " + fecha + "?");
 
         if (confirmacion) {
-            // Hacer una solicitud AJAX o redirigir a eliminar.php pasando la fecha como parámetro
-            // Ejemplo de redirección:
             window.location.href = "eliminarfecha.php?fecha=" + fecha;
         }
     }
+    function eliminarUsuario() {
+        var confirmacion = confirm("¿Estás seguro de que deseas eliminar este usuario?");
+
+        if (confirmacion) {
+            window.location.href = "eliminar_usuario.php";
+        }
+    }
 </script>
-
-
-
-
-
