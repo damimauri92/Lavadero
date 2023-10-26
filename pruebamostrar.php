@@ -2,7 +2,8 @@
         $inc = include("con_db.php");
        
         //consulta1
-        $sql1 = "SELECT nombre FROM usuarios WHERE idusuario = 1";
+       // $sql1 = "SELECT nombre FROM usuarios WHERE idusuario = 1";
+        $sql1 = "SELECT nombre FROM usuarios WHERE id = 1";
         $result1 = $conexion->query($sql1);
         // Mostrar resultados de la Consulta 2
         while ($row1 = $result1->fetch_assoc()) {

@@ -1,5 +1,5 @@
 <?php
-$conexion = mysqli_connect("localhost", "root", "", "bd_lav");
+$conexion = mysqli_connect("localhost", "root", "root", "login_register_db");
 
 // Verificar la conexión
 if (!$conexion) {
@@ -10,7 +10,8 @@ if (!$conexion) {
 $idUsuario = 1; // Cambia esto según tu lógica para obtener el id del usuario
 
 // Consulta para eliminar el usuario
-$sql = "DELETE FROM usuarios WHERE idusuario = $idUsuario";
+$sql = "DELETE FROM usuarios WHERE id = $idUsuario";
+//ÇÇÇÇÇÇÇÇÇÇÇÇÇ$sql = "DELETE FROM usuarios WHERE idusuario = $idUsuario";
 
 if (mysqli_query($conexion, $sql)) {
     echo "El usuario se eliminó correctamente";
